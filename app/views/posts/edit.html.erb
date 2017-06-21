@@ -1,0 +1,21 @@
+<h1>
+  <%=  @post.title %>
+</h1>
+
+<%= form_for @post do |f| %>
+
+    <div class="form-group">
+      <label for="">Titre de l'article</label>
+      <%= f.text_field :title, class: 'form-control' %>
+      <%= f.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="forsm-group">
+      <button type="submit">Modifier l'article</button>
+    </div>
+
+<% end %>
+<p>
+  <a href="<%= post_path(@post.id) %>" class="btn btn-primary">Retourner à l'article</a>
+  <a href="<%= posts_path %>" class="btn btn-primary">Revenir à la liste des articles</a>
+</p>
