@@ -5,7 +5,8 @@ Rails.application.routes.draw do
   get 'pages/test', as: 'test'
   get 'pages/hello(/:name)', to: 'pages#hello', as: 'hello'
 
-  get 'posts', to: 'posts#index', as: 'posts'
+  resources :posts
+  resources :categories
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

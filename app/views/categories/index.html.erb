@@ -1,0 +1,28 @@
+<h1>Articles</h1>
+
+<table>
+  <% @categories.each do |category| %>
+
+
+    <tr>
+      <td>
+        <%=  category.id %>
+      </td>
+      <td>
+        <%=  category.name %>
+      </td>
+
+      <td>
+        <a href="<%= edit_category_path(category.id) %>" class="btn btn-default">Editer la catégorie</a>
+        <a href="<%= category_path(category.id) %>" class="btn btn-danger" data-confirm="Etes-vous sûr ?" data-method="DELETE">Supprimer la catégorie</a>
+      </td>
+    </tr>
+
+
+  <% end %>
+</table>
+
+
+<p>
+  <a href="<%= new_category_path %>">Créer une catégorie</a>
+</p>

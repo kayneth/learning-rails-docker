@@ -1,0 +1,24 @@
+<h1>
+  Nouvel article
+</h1>
+
+<%= form_for @post do |f| %>
+
+    <div class="form-group">
+      <label for="">Titre de l'article</label>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <label for="">Contenu de l'article</label>
+      <%= f.text_area :content, class: 'form-control' %>
+    </div>
+
+    <div class="forsm-group">
+      <button type="submit" class="btn btn-success">Créer l'article</button>
+    </div>
+
+<% end %>
+<p>
+  <a href="<%= posts_path %>" class="btn btn-primary">Revenir à la liste des articles</a>
+</p>
